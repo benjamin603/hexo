@@ -40,7 +40,7 @@ function indexTalk() {
     let d = loadData('talk', 10);
     if (d) talk(d);
     else {
-        fetch('http://i.snailll.cn/api/memo?creatorId=1&tag=说说&limit=10').then(res => res.json()).then(data => { // 更改地址和ID
+        fetch('https://i.snailll.cn/api/memo?creatorId=1&tag=说说&limit=10').then(res => res.json()).then(data => { // 更改地址和ID
             data = toText(data.data)
             talk(data);
             saveData('talk', data);
