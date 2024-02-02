@@ -18,25 +18,28 @@
   <meta name="author" content="Benjamin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="阿里云ECS和NAS都使用了Docker部署服务，刚好接触了1Panel面板，相对于宝塔面板，很是喜欢!">
+    <meta name="description" content="对于我这种有点特殊洁癖的人来说，经常给自己的windows电脑做系统，伴随而来的就是各种环境、软件的安装配置，很浪费时间。所以系统备份就显得尤为重要了！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu部署1Panel">
-<meta property="og:url" content="http://example.com/posts/6110.html">
+<meta property="og:title" content="Windows11系统备份">
+<meta property="og:url" content="http://example.com/posts/6081.html">
 <meta property="og:site_name" content="Benjamin">
-<meta property="og:description" content="阿里云ECS和NAS都使用了Docker部署服务，刚好接触了1Panel面板，相对于宝塔面板，很是喜欢!">
+<meta property="og:description" content="对于我这种有点特殊洁癖的人来说，经常给自己的windows电脑做系统，伴随而来的就是各种环境、软件的安装配置，很浪费时间。所以系统备份就显得尤为重要了！">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/65bb58be2e437.png">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/65bb58c587e0f.png">
-<meta property="article:published_time" content="2024-02-01T02:40:51.000Z">
-<meta property="article:modified_time" content="2024-02-02T01:12:20.452Z">
+<meta property="og:image" content="https://r2.snbing.com/img/2024/02/65bba39dbd0ba.png">
+<meta property="og:image" content="https://r2.snbing.com/img/2024/02/65bba38f2815f.png">
+<meta property="og:image" content="https://r2.snbing.com/img/2024/02/65bba37fbbc24.png">
+<meta property="og:image" content="https://r2.snbing.com/img/2024/02/65bba36b213e2.png">
+<meta property="article:published_time" content="2024-02-01T13:44:03.000Z">
+<meta property="article:modified_time" content="2024-02-02T01:12:36.746Z">
 <meta property="article:author" content="Benjamin">
-<meta property="article:tag" content="1Panel">
+<meta property="article:tag" content="Windows11">
+<meta property="article:tag" content="系统备份">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://r2.snbing.com/img/2024/02/65bb58be2e437.png">
+<meta name="twitter:image" content="https://r2.snbing.com/img/2024/02/65bba39dbd0ba.png">
   
   
   
-  <title>Ubuntu部署1Panel - Benjamin</title>
+  <title>Windows11系统备份 - Benjamin</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -223,7 +226,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Ubuntu部署1Panel"></span>
+            <span id="subtitle" data-typed-text="Windows11系统备份"></span>
           
         </div>
 
@@ -234,8 +237,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-01 10:40" pubdate>
-          2024年2月1日 上午
+        <time datetime="2024-02-01 21:44" pubdate>
+          2024年2月1日 晚上
         </time>
       </span>
     
@@ -278,30 +281,26 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Ubuntu部署1Panel</h1>
+            <h1 id="seo-header">Windows11系统备份</h1>
             
             
               <div class="markdown-body">
                 
-                <p>阿里云ECS和NAS都使用了Docker部署服务，刚好接触了<a target="_blank" rel="noopener" href="https://1panel.cn/">1Panel</a>面板，相对于宝塔面板，很是喜欢!</p>
+                <p>对于我这种有点特殊洁癖的人来说，经常给自己的windows电脑做系统，伴随而来的就是各种环境、软件的安装配置，很浪费时间。所以系统备份就显得尤为重要了！</p>
 <span id="more"></span>
 
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh &amp;&amp; sudo bash quick_start.sh<br></code></pre></td></tr></table></figure>
-
-<p>一条代码即可搞定！</p>
-<blockquote>
-<p>1Panel面板后台账号不支持使用过于简单的密码，在部署1Panel时却没有这种限制！</p>
-</blockquote>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="添加备份账号"><a href="#添加备份账号" class="headerlink" title="添加备份账号"></a>添加备份账号</h3><p>目前将服务器一些应用、数据备份在阿里云OSS，后期会增加备份到Nas。</p>
-<p><img src="https://r2.snbing.com/img/2024/02/65bb58be2e437.png" srcset="/img/loading.gif" lazyload alt="备份账号"></p>
-<h3 id="计划任务"><a href="#计划任务" class="headerlink" title="计划任务"></a>计划任务</h3><p><img src="https://r2.snbing.com/img/2024/02/65bb58c587e0f.png" srcset="/img/loading.gif" lazyload alt="计划任务"></p>
-<p>1Panel支持定时备份应用、网站、数据库等操作，挺方便，再也不担心服务器挂了导致数据丢失！</p>
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ul>
-<li><code>Memos</code> - 一款隐私优先的轻量级笔记服务，轻松捕捉并分享您的精彩想法。</li>
-<li><code>Typecho</code> - 用来搭建Plog相册站点</li>
-<li><code>Lsky-Pro</code> - 自建图床</li>
-</ul>
-
+<h2 id="Windows11系统备份"><a href="#Windows11系统备份" class="headerlink" title="Windows11系统备份"></a>Windows11系统备份</h2><p>打开控制面板 - 系统和安全 - 备份和还原(windows7) - 设置备份，我们可以选择本地磁盘或者网络路径，下文我们选择局域网NAS来存放备份文件！</p>
+<p><img src="https://r2.snbing.com/img/2024/02/65bba39dbd0ba.png" srcset="/img/loading.gif" lazyload alt="选择要保存备份的位置"></p>
+<p>在NAS创建用于存放系统备份的共享文件夹，例：<code>system backup</code>，网络位置浏览刚才创建的NAS文件夹并填写NAS登录账户信息，点击下一步！</p>
+<p><img src="https://r2.snbing.com/img/2024/02/65bba38f2815f.png" srcset="/img/loading.gif" lazyload alt="选择网络位置"></p>
+<p>备份内容我们根据自己的情况来选择，我这里除了系统C盘外，还需要备份D盘文件，所以选择了<code>让我选择</code></p>
+<p><img src="https://r2.snbing.com/img/2024/02/65bba37fbbc24.png" srcset="/img/loading.gif" lazyload alt="备份什么内容"></p>
+<p>接下来就是选择更改计划，我们以周为单位让进行自动备份。</p>
+<p><img src="https://r2.snbing.com/img/2024/02/65bba36b213e2.png" srcset="/img/loading.gif" lazyload alt="多久备份一次"></p>
+<p>最后我们点击完成！</p>
+<div class="note note-info">
+            <p>等有时间了测试下使用系统备份来还原系统，查看能达到什么样的还原程度！</p>
+          </div>
                 
               </div>
             
@@ -334,7 +333,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/1Panel/" class="print-no-link">#1Panel</a>
+        <a href="/tags/Windows11/" class="print-no-link">#Windows11</a>
+      
+        <a href="/tags/%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD/" class="print-no-link">#系统备份</a>
       
     </div>
   
@@ -346,9 +347,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/59162.html" title="1Panel部署兰空图床">
+                      <a href="/posts/35839.html" title="iPhone Photos备份至群晖NAS">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">1Panel部署兰空图床</span>
+                        <span class="hidden-mobile">iPhone Photos备份至群晖NAS</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -356,8 +357,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/48744.html" title="Docker搭建Twikoo">
-                        <span class="hidden-mobile">Docker搭建Twikoo</span>
+                      <a href="/posts/145.html" title="解决Git-Emoji-Commit插件BUG">
+                        <span class="hidden-mobile">解决Git-Emoji-Commit插件BUG</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

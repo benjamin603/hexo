@@ -18,25 +18,25 @@
   <meta name="author" content="Benjamin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="阿里云ECS和NAS都使用了Docker部署服务，刚好接触了1Panel面板，相对于宝塔面板，很是喜欢!">
+    <meta name="description" content="本文用来记录说明如何将iPhone Photos备份到Synology NAS。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu部署1Panel">
-<meta property="og:url" content="http://example.com/posts/6110.html">
+<meta property="og:title" content="iPhone Photos备份至群晖NAS">
+<meta property="og:url" content="http://example.com/posts/35839.html">
 <meta property="og:site_name" content="Benjamin">
-<meta property="og:description" content="阿里云ECS和NAS都使用了Docker部署服务，刚好接触了1Panel面板，相对于宝塔面板，很是喜欢!">
+<meta property="og:description" content="本文用来记录说明如何将iPhone Photos备份到Synology NAS。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/65bb58be2e437.png">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/65bb58c587e0f.png">
-<meta property="article:published_time" content="2024-02-01T02:40:51.000Z">
-<meta property="article:modified_time" content="2024-02-02T01:12:20.452Z">
+<meta property="og:image" content="https://r2.snbing.com/img/2024/02/65bbb03daf2e4.png">
+<meta property="article:published_time" content="2024-02-01T14:33:39.000Z">
+<meta property="article:modified_time" content="2024-02-02T01:12:04.876Z">
 <meta property="article:author" content="Benjamin">
-<meta property="article:tag" content="1Panel">
+<meta property="article:tag" content="iPhone">
+<meta property="article:tag" content="Photos">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://r2.snbing.com/img/2024/02/65bb58be2e437.png">
+<meta name="twitter:image" content="https://r2.snbing.com/img/2024/02/65bbb03daf2e4.png">
   
   
   
-  <title>Ubuntu部署1Panel - Benjamin</title>
+  <title>iPhone Photos备份至群晖NAS - Benjamin</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -223,7 +223,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Ubuntu部署1Panel"></span>
+            <span id="subtitle" data-typed-text="iPhone Photos备份至群晖NAS"></span>
           
         </div>
 
@@ -234,8 +234,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-01 10:40" pubdate>
-          2024年2月1日 上午
+        <time datetime="2024-02-01 22:33" pubdate>
+          2024年2月1日 晚上
         </time>
       </span>
     
@@ -278,29 +278,38 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Ubuntu部署1Panel</h1>
+            <h1 id="seo-header">iPhone Photos备份至群晖NAS</h1>
             
             
               <div class="markdown-body">
                 
-                <p>阿里云ECS和NAS都使用了Docker部署服务，刚好接触了<a target="_blank" rel="noopener" href="https://1panel.cn/">1Panel</a>面板，相对于宝塔面板，很是喜欢!</p>
+                <p>本文用来记录说明如何将iPhone Photos备份到Synology NAS。</p>
 <span id="more"></span>
 
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh &amp;&amp; sudo bash quick_start.sh<br></code></pre></td></tr></table></figure>
-
-<p>一条代码即可搞定！</p>
 <blockquote>
-<p>1Panel面板后台账号不支持使用过于简单的密码，在部署1Panel时却没有这种限制！</p>
+<p>我想把iPhone上的照片和影片備份到Synology中，但是始終找到辦法完成這個任務。有沒有什麽快速的方法能幫助我備份iPhone到Synology？</p>
+<p>- 來自Reddit的提問</p>
 </blockquote>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="添加备份账号"><a href="#添加备份账号" class="headerlink" title="添加备份账号"></a>添加备份账号</h3><p>目前将服务器一些应用、数据备份在阿里云OSS，后期会增加备份到Nas。</p>
-<p><img src="https://r2.snbing.com/img/2024/02/65bb58be2e437.png" srcset="/img/loading.gif" lazyload alt="备份账号"></p>
-<h3 id="计划任务"><a href="#计划任务" class="headerlink" title="计划任务"></a>计划任务</h3><p><img src="https://r2.snbing.com/img/2024/02/65bb58c587e0f.png" srcset="/img/loading.gif" lazyload alt="计划任务"></p>
-<p>1Panel支持定时备份应用、网站、数据库等操作，挺方便，再也不担心服务器挂了导致数据丢失！</p>
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ul>
-<li><code>Memos</code> - 一款隐私优先的轻量级笔记服务，轻松捕捉并分享您的精彩想法。</li>
-<li><code>Typecho</code> - 用来搭建Plog相册站点</li>
-<li><code>Lsky-Pro</code> - 自建图床</li>
-</ul>
+<p>现在对于手机拍照的要求越来越高了，导致手机照片体积也越来越大。而且几乎80%的图片都存放在iPhone上，为了保护照片的安全，除了iCloud备份外，还需要另外一个物理存储空间，这个时候Synology NAS就排上用场了！</p>
+<h2 id="Synology-NAS设置共享文件夹"><a href="#Synology-NAS设置共享文件夹" class="headerlink" title="Synology NAS设置共享文件夹"></a>Synology NAS设置共享文件夹</h2><p>登录Synology NAS，点击<code>File Station</code>，创建一个用来存放iPhone Photos的文件夹</p>
+<h2 id="Windows设置"><a href="#Windows设置" class="headerlink" title="Windows设置"></a>Windows设置</h2><ol>
+<li>使用<code>Windows + I</code>快捷键打开「设置」，在左侧菜单中选择「网络和 Intetnet」，然后点击右侧的「高级网络设置」选项。</li>
+<li>选择「高级共享设置」，然后在「专用网络」下启用「网络发现」开关。</li>
+<li>（可选）如果你计划与其他网络设备共享文件，可以打开「文件和打印机共享」开关。</li>
+<li>网络发现在「公共网络」上默认关闭，在「专用网络」上默认开启。你还可以在「专用网络」上选择或取消勾选「自动设置网络连接的设备」。</li>
+</ol>
+<p><img src="https://r2.snbing.com/img/2024/02/65bbb03daf2e4.png" srcset="/img/loading.gif" lazyload alt="高级共享设置"></p>
+<h2 id="iPhone设置"><a href="#iPhone设置" class="headerlink" title="iPhone设置"></a>iPhone设置</h2><p>DS file非常适合管理存储在Synology NAS上的文件，例如，可通过安全HTTPS连接在NAS和Android设备之间上传和下载文件，或执行基本编辑任务。此外，DS file对于随时浏览图片、观看视频或查看工作文档也非常有用。</p>
+<ol>
+<li><p>在App Store搜索<code>DS file</code>安装并登录；</p>
+</li>
+<li><p>点击左上角更多（三横线图标），点击<code>照片备份</code> ，这时会要求再次登录NAS，登录后选择<a href="#Synology-NAS%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9">Synology NAS设置共享文件夹</a>创建的文件夹</p>
+<blockquote>
+<p>建议连接wifi备份，以免浪费移动流量！</p>
+</blockquote>
+</li>
+</ol>
+<p>以上是关于iPhone备份到Synology NAS的全部内容，备份iPhone到Synology前，您需要先将Synology映射到Internet，然后在透过DS file将iPhone照片备份到Synology。</p>
 
                 
               </div>
@@ -334,7 +343,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/1Panel/" class="print-no-link">#1Panel</a>
+        <a href="/tags/iPhone/" class="print-no-link">#iPhone</a>
+      
+        <a href="/tags/Photos/" class="print-no-link">#Photos</a>
       
     </div>
   
@@ -346,9 +357,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/59162.html" title="1Panel部署兰空图床">
+                      <a href="/posts/32684.html" title="PicGo+Cloudflare-R2存储做图床">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">1Panel部署兰空图床</span>
+                        <span class="hidden-mobile">PicGo+Cloudflare-R2存储做图床</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -356,8 +367,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/48744.html" title="Docker搭建Twikoo">
-                        <span class="hidden-mobile">Docker搭建Twikoo</span>
+                      <a href="/posts/6081.html" title="Windows11系统备份">
+                        <span class="hidden-mobile">Windows11系统备份</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -18,25 +18,30 @@
   <meta name="author" content="Benjamin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="阿里云ECS和NAS都使用了Docker部署服务，刚好接触了1Panel面板，相对于宝塔面板，很是喜欢!">
+    <meta name="description" content="Cloudflare R2存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。也算是带宽联盟一员。类似于阿里云国际的OSS免费5G空间，流量收费，但是使用自定义域名套用Cloudflare的cdn就流量免费，Cloudflare自己的R2存储流量不收费，收费的是存储空间和请求次数。A类操作和B类操作分开收费，上传属于A类操作，下载和访问属于B类操作。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu部署1Panel">
-<meta property="og:url" content="http://example.com/posts/6110.html">
+<meta property="og:title" content="PicGo+Cloudflare-R2存储做图床">
+<meta property="og:url" content="http://example.com/posts/32684.html">
 <meta property="og:site_name" content="Benjamin">
-<meta property="og:description" content="阿里云ECS和NAS都使用了Docker部署服务，刚好接触了1Panel面板，相对于宝塔面板，很是喜欢!">
+<meta property="og:description" content="Cloudflare R2存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。也算是带宽联盟一员。类似于阿里云国际的OSS免费5G空间，流量收费，但是使用自定义域名套用Cloudflare的cdn就流量免费，Cloudflare自己的R2存储流量不收费，收费的是存储空间和请求次数。A类操作和B类操作分开收费，上传属于A类操作，下载和访问属于B类操作。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/65bb58be2e437.png">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/65bb58c587e0f.png">
-<meta property="article:published_time" content="2024-02-01T02:40:51.000Z">
-<meta property="article:modified_time" content="2024-02-02T01:12:20.452Z">
+<meta property="og:image" content="https://r2.snbing.com/img/2024/02/image-20240202090853228.png">
+<meta property="og:image" content="https://r2.snbing.com/img/2024/02/a2ca200d6ce03e2da268668f9631b961.webp">
+<meta property="og:image" content="https://r2.snbing.com/img/2024/02/image-20240202084558942.png">
+<meta property="og:image" content="https://r2.snbing.com/img/2024/02/image-20240202084807613.png">
+<meta property="og:image" content="https://r2.snbing.com/img/2024/02/image-20240202084936393.png">
+<meta property="og:image" content="https://r2.snbing.com/img/2024/02/image-20240202085128691.png">
+<meta property="og:image" content="https://r2.snbing.com/img/2024/02/20240202082815.png">
+<meta property="article:published_time" content="2024-02-02T00:38:52.000Z">
+<meta property="article:modified_time" content="2024-02-02T01:10:35.433Z">
 <meta property="article:author" content="Benjamin">
-<meta property="article:tag" content="1Panel">
+<meta property="article:tag" content="Cloudflare">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://r2.snbing.com/img/2024/02/65bb58be2e437.png">
+<meta name="twitter:image" content="https://r2.snbing.com/img/2024/02/image-20240202090853228.png">
   
   
   
-  <title>Ubuntu部署1Panel - Benjamin</title>
+  <title>PicGo+Cloudflare-R2存储做图床 - Benjamin</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -223,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Ubuntu部署1Panel"></span>
+            <span id="subtitle" data-typed-text="PicGo+Cloudflare-R2存储做图床"></span>
           
         </div>
 
@@ -234,8 +239,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-01 10:40" pubdate>
-          2024年2月1日 上午
+        <time datetime="2024-02-02 08:38" pubdate>
+          2024年2月2日 早上
         </time>
       </span>
     
@@ -278,29 +283,71 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Ubuntu部署1Panel</h1>
+            <h1 id="seo-header">PicGo+Cloudflare-R2存储做图床</h1>
             
             
               <div class="markdown-body">
                 
-                <p>阿里云ECS和NAS都使用了Docker部署服务，刚好接触了<a target="_blank" rel="noopener" href="https://1panel.cn/">1Panel</a>面板，相对于宝塔面板，很是喜欢!</p>
+                <p>Cloudflare R2存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。也算是带宽联盟一员。类似于阿里云国际的OSS免费5G空间，流量收费，但是使用自定义域名套用Cloudflare的cdn就流量免费，Cloudflare自己的R2存储流量不收费，收费的是存储空间和请求次数。A类操作和B类操作分开收费，上传属于A类操作，下载和访问属于B类操作。</p>
 <span id="more"></span>
 
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh &amp;&amp; sudo bash quick_start.sh<br></code></pre></td></tr></table></figure>
-
-<p>一条代码即可搞定！</p>
+<p><img src="https://r2.snbing.com/img/2024/02/image-20240202090853228.png" srcset="/img/loading.gif" lazyload alt="R2 Pricing"></p>
+<p>也就是说，可以免费存储10G的文件，每个月可以上传100万次，访问1000万次，假如用作图床，一般是用不到这个量级的。并且可以绑定自定义域名，套用页面规则以后可以设置浏览器缓存，这样可以减少一些请求次数并且可以防止被人刷请求次数导致一晚上过去，房子就不属于自己了。不自定义域名也是可以的，也就是说你甚至不需要拥有域名就可以拥有一个图床。</p>
+<h2 id="开通R2"><a href="#开通R2" class="headerlink" title="开通R2"></a>开通R2</h2><p>首先当然是拥有一个Cloudflare账号，并且点击右上角的语言设置中文。</p>
+<p>第一步当然是开通R2，侧边栏找到R2然后点击开通。这里可以绑定支持外币支付的卡，或者直接绑定paypal，中国区的paypal也是可以的。</p>
+<p><img src="https://r2.snbing.com/img/2024/02/a2ca200d6ce03e2da268668f9631b961.webp" srcset="/img/loading.gif" lazyload alt="开通R2"></p>
+<h2 id="创建存储桶"><a href="#创建存储桶" class="headerlink" title="创建存储桶"></a>创建存储桶</h2><p><img src="https://r2.snbing.com/img/2024/02/image-20240202084558942.png" srcset="/img/loading.gif" lazyload alt="创建存储桶"></p>
 <blockquote>
-<p>1Panel面板后台账号不支持使用过于简单的密码，在部署1Panel时却没有这种限制！</p>
+<p>不建议无脑选亚太地区，亚太地区虽然近但是国际访问速度受限，我这里选择北美西部</p>
 </blockquote>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="添加备份账号"><a href="#添加备份账号" class="headerlink" title="添加备份账号"></a>添加备份账号</h3><p>目前将服务器一些应用、数据备份在阿里云OSS，后期会增加备份到Nas。</p>
-<p><img src="https://r2.snbing.com/img/2024/02/65bb58be2e437.png" srcset="/img/loading.gif" lazyload alt="备份账号"></p>
-<h3 id="计划任务"><a href="#计划任务" class="headerlink" title="计划任务"></a>计划任务</h3><p><img src="https://r2.snbing.com/img/2024/02/65bb58c587e0f.png" srcset="/img/loading.gif" lazyload alt="计划任务"></p>
-<p>1Panel支持定时备份应用、网站、数据库等操作，挺方便，再也不担心服务器挂了导致数据丢失！</p>
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ul>
-<li><code>Memos</code> - 一款隐私优先的轻量级笔记服务，轻松捕捉并分享您的精彩想法。</li>
-<li><code>Typecho</code> - 用来搭建Plog相册站点</li>
-<li><code>Lsky-Pro</code> - 自建图床</li>
-</ul>
+<h2 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h2><p><img src="https://r2.snbing.com/img/2024/02/image-20240202084807613.png" srcset="/img/loading.gif" lazyload alt="自定义域名"></p>
+<p>选择<code>连接域</code>并输入自己想要的域名，如果域名已经托管至Cloudflare会自动解析，否则需要手动解析才会生效！</p>
+<p><img src="https://r2.snbing.com/img/2024/02/image-20240202084936393.png" srcset="/img/loading.gif" lazyload alt="自定义域名"></p>
+<h2 id="开通API"><a href="#开通API" class="headerlink" title="开通API"></a>开通API</h2><p>回到R2<strong>的概述界面，点击右上角的 <strong>管理 R2 API 令牌，</strong> 然后点击右上角的</strong>创建api令牌****</p>
+<p><img src="https://r2.snbing.com/img/2024/02/image-20240202085128691.png" srcset="/img/loading.gif" lazyload alt="创建API"></p>
+<blockquote>
+<p><strong>权限</strong>：选择<strong>对象读和写</strong>；<strong>TTL</strong>：选择<strong>永久</strong></p>
+<p>创建完成令牌以后请把<strong>访问密钥 ID</strong>和<strong>机密访问密钥</strong>收藏好，只会显示这一次，以后用的时候就找不到了，记下来以后还能用到。当然，如果没记住的话，以后再创建一个api令牌也是可以的</p>
+</blockquote>
+<h2 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h2><p>搜索并安装插件：<strong>S3 1.3.4</strong></p>
+<p><img src="https://r2.snbing.com/img/2024/02/20240202082815.png" srcset="/img/loading.gif" lazyload alt="配置PicGo"></p>
+<p>插件配置：</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>图床配置名</td>
+<td>任意填写</td>
+</tr>
+<tr>
+<td>应用密钥 ID</td>
+<td><strong>访问密钥 ID</strong></td>
+</tr>
+<tr>
+<td>应用密钥</td>
+<td><strong>机密访问密钥</strong></td>
+</tr>
+<tr>
+<td>桶名</td>
+<td>创建的R2桶名</td>
+</tr>
+<tr>
+<td>文件路径</td>
+<td>自定义（保持默认）</td>
+</tr>
+<tr>
+<td>自定义节点</td>
+<td><strong>存储桶详细信息</strong>中的<strong>S3 API</strong></td>
+</tr>
+<tr>
+<td>自定义域名</td>
+<td>填入第三步设定的自定义域名+桶名。例：<code>https://r2.snbing.com/img</code></td>
+</tr>
+</tbody></table>
 
                 
               </div>
@@ -334,7 +381,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/1Panel/" class="print-no-link">#1Panel</a>
+        <a href="/tags/Cloudflare/" class="print-no-link">#Cloudflare</a>
       
     </div>
   
@@ -346,18 +393,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/59162.html" title="1Panel部署兰空图床">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">1Panel部署兰空图床</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/48744.html" title="Docker搭建Twikoo">
-                        <span class="hidden-mobile">Docker搭建Twikoo</span>
+                      <a href="/posts/35839.html" title="iPhone Photos备份至群晖NAS">
+                        <span class="hidden-mobile">iPhone Photos备份至群晖NAS</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
