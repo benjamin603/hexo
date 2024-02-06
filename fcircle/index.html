@@ -18,17 +18,21 @@
   <meta name="author" content="Benjamin">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="http://example.com/archives/2023/10/index.html">
+    <meta name="description" content="let UserConfig &#x3D; {         &#x2F;&#x2F; 填写你的api地址         private_api_url: &#39;https:&#x2F;&#x2F;hexo-circle-of-friends-two-phi.vercel.app&#x2F;&#39;,         &#x2F;&#x2F; 初始加载几篇文章         page_init_number: 20,         &#x2F;&#x2F; 点击加载更多时，一次最多加载">
+<meta property="og:type" content="website">
+<meta property="og:title" content="友链朋友圈">
+<meta property="og:url" content="http://example.com/fcircle/index.html">
 <meta property="og:site_name" content="Benjamin">
+<meta property="og:description" content="let UserConfig &#x3D; {         &#x2F;&#x2F; 填写你的api地址         private_api_url: &#39;https:&#x2F;&#x2F;hexo-circle-of-friends-two-phi.vercel.app&#x2F;&#39;,         &#x2F;&#x2F; 初始加载几篇文章         page_init_number: 20,         &#x2F;&#x2F; 点击加载更多时，一次最多加载">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-05T23:11:27.000Z">
+<meta property="article:modified_time" content="2024-02-06T00:28:36.711Z">
 <meta property="article:author" content="Benjamin">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>归档 - Benjamin</title>
+  <title>友链朋友圈 - Benjamin</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -234,7 +238,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="归档"></span>
+            <span id="subtitle" data-typed-text="友链朋友圈"></span>
           
         </div>
 
@@ -261,23 +265,29 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 13 篇文章</p>
-  <hr>
-  
-  
-    
-      
-      <p class="h5">2023</p>
-    
-    <a href="/posts/43999.html" class="list-group-item list-group-item-action">
-      <time>10-06</time>
-      <div class="list-group-item-title">NAS初接触</div>
-    </a>
-  
-</div>
+<article class="page-content">
+  <div id="hexo-circle-of-friends-root"></div>
+<script>
+    let UserConfig = {
+        // 填写你的api地址
+        private_api_url: 'https://hexo-circle-of-friends-two-phi.vercel.app/',
+        // 初始加载几篇文章
+        page_init_number: 20,
+        // 点击加载更多时，一次最多加载几篇文章，默认10
+        page_turning_number: 10,
+        // 头像加载失败时，默认头像地址
+        error_img: 'https://sdn.geekzu.org/avatar/57d8260dfb55501c37dde588e7c3852c',
+        // 进入页面时第一次的排序规则
+        sort_rule: 'created',
+        // 本地文章缓存数据过期时间（天）
+        expire_days: 1, 
+    }
+</script>
+<script type="text/javascript" src="https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.13/dist/fcircle.min.js"></script>
 
+  
 
+</article>
 
 
 
