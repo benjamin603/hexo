@@ -25,19 +25,13 @@
 <meta property="og:site_name" content="Benjamin">
 <meta property="og:description" content="Cloudflare R2存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。也算是带宽联盟一员。类似于阿里云国际的OSS免费5G空间，流量收费，但是使用自定义域名套用Cloudflare的cdn就流量免费，Cloudflare自己的R2存储流量不收费，收费的是存储空间和请求次数。A类操作和B类操作分开收费，上传属于A类操作，下载和访问属于B类操作。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/image-20240202090853228.png">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/a2ca200d6ce03e2da268668f9631b961.webp">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/image-20240202084558942.png">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/image-20240202084807613.png">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/image-20240202084936393.png">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/image-20240202085128691.png">
-<meta property="og:image" content="https://r2.snbing.com/img/2024/02/20240202082815.png">
+<meta property="og:image" content="https://r2.snbing.com/img/cover/dcac2a59d6ac01a1.webp">
 <meta property="article:published_time" content="2024-02-02T00:38:52.000Z">
-<meta property="article:modified_time" content="2024-02-02T01:10:35.433Z">
+<meta property="article:modified_time" content="2024-02-19T09:54:09.206Z">
 <meta property="article:author" content="Benjamin">
 <meta property="article:tag" content="Cloudflare">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://r2.snbing.com/img/2024/02/image-20240202090853228.png">
+<meta name="twitter:image" content="https://r2.snbing.com/img/cover/dcac2a59d6ac01a1.webp">
   
   
   
@@ -315,28 +309,21 @@
                 
                 <p>Cloudflare R2存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。也算是带宽联盟一员。类似于阿里云国际的OSS免费5G空间，流量收费，但是使用自定义域名套用Cloudflare的cdn就流量免费，Cloudflare自己的R2存储流量不收费，收费的是存储空间和请求次数。A类操作和B类操作分开收费，上传属于A类操作，下载和访问属于B类操作。</p>
 <span id="more"></span>
-
-<p><img src="https://r2.snbing.com/img/2024/02/image-20240202090853228.png" srcset="/img/loading.gif" lazyload alt="R2 Pricing"></p>
 <p>也就是说，可以免费存储10G的文件，每个月可以上传100万次，访问1000万次，假如用作图床，一般是用不到这个量级的。并且可以绑定自定义域名，套用页面规则以后可以设置浏览器缓存，这样可以减少一些请求次数并且可以防止被人刷请求次数导致一晚上过去，房子就不属于自己了。不自定义域名也是可以的，也就是说你甚至不需要拥有域名就可以拥有一个图床。</p>
 <h2 id="开通R2"><a href="#开通R2" class="headerlink" title="开通R2"></a>开通R2</h2><p>首先当然是拥有一个Cloudflare账号，并且点击右上角的语言设置中文。</p>
 <p>第一步当然是开通R2，侧边栏找到R2然后点击开通。这里可以绑定支持外币支付的卡，或者直接绑定paypal，中国区的paypal也是可以的。</p>
-<p><img src="https://r2.snbing.com/img/2024/02/a2ca200d6ce03e2da268668f9631b961.webp" srcset="/img/loading.gif" lazyload alt="开通R2"></p>
-<h2 id="创建存储桶"><a href="#创建存储桶" class="headerlink" title="创建存储桶"></a>创建存储桶</h2><p><img src="https://r2.snbing.com/img/2024/02/image-20240202084558942.png" srcset="/img/loading.gif" lazyload alt="创建存储桶"></p>
-<blockquote>
+<h2 id="创建存储桶"><a href="#创建存储桶" class="headerlink" title="创建存储桶"></a>创建存储桶</h2><blockquote>
 <p>不建议无脑选亚太地区，亚太地区虽然近但是国际访问速度受限，我这里选择北美西部</p>
 </blockquote>
-<h2 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h2><p><img src="https://r2.snbing.com/img/2024/02/image-20240202084807613.png" srcset="/img/loading.gif" lazyload alt="自定义域名"></p>
-<p>选择<code>连接域</code>并输入自己想要的域名，如果域名已经托管至Cloudflare会自动解析，否则需要手动解析才会生效！</p>
-<p><img src="https://r2.snbing.com/img/2024/02/image-20240202084936393.png" srcset="/img/loading.gif" lazyload alt="自定义域名"></p>
-<h2 id="开通API"><a href="#开通API" class="headerlink" title="开通API"></a>开通API</h2><p>回到R2<strong>的概述界面，点击右上角的 <strong>管理 R2 API 令牌，</strong> 然后点击右上角的</strong>创建api令牌****</p>
-<p><img src="https://r2.snbing.com/img/2024/02/image-20240202085128691.png" srcset="/img/loading.gif" lazyload alt="创建API"></p>
+<h2 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h2><p>选择<code>连接域</code>并输入自己想要的域名，如果域名已经托管至Cloudflare会自动解析，否则需要手动解析才会生效！</p>
+<h2 id="开通API"><a href="#开通API" class="headerlink" title="开通API"></a>开通API</h2><p>回到R2<strong>的概述界面，点击右上角的 </strong>管理 R2 API 令牌，<strong> 然后点击右上角的</strong>创建api令牌<em>**</em></p>
 <blockquote>
 <p><strong>权限</strong>：选择<strong>对象读和写</strong>；<strong>TTL</strong>：选择<strong>永久</strong></p>
 <p>创建完成令牌以后请把<strong>访问密钥 ID</strong>和<strong>机密访问密钥</strong>收藏好，只会显示这一次，以后用的时候就找不到了，记下来以后还能用到。当然，如果没记住的话，以后再创建一个api令牌也是可以的</p>
 </blockquote>
 <h2 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h2><p>搜索并安装插件：<strong>S3 1.3.4</strong></p>
-<p><img src="https://r2.snbing.com/img/2024/02/20240202082815.png" srcset="/img/loading.gif" lazyload alt="配置PicGo"></p>
 <p>插件配置：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -344,7 +331,8 @@
 <th>值</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>图床配置名</td>
 <td>任意填写</td>
 </tr>
@@ -372,7 +360,9 @@
 <td>自定义域名</td>
 <td>填入第三步设定的自定义域名+桶名。例：<code>https://r2.snbing.com/img</code></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
                 
               </div>
@@ -417,6 +407,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/posts/49685.html" title="图床管理工具Piclist推荐">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">图床管理工具Piclist推荐</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
