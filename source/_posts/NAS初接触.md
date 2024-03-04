@@ -4,8 +4,8 @@ tags: NAS
 categories: 折腾记录
 abbrlink: 43999
 date: 2023-10-06 08:25:06
-sticky: 100
-index_img: https://r2.snbing.com/img/cover/5d518828ff221e17.webp
+sticky: 
+index_img: 
 ---
 
 ## 前言

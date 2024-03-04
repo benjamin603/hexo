@@ -6,7 +6,7 @@ tags:
   - Photos
 abbrlink: 35839
 date: 2024-02-01 22:33:39
-index_img: https://r2.snbing.com/img/cover/5d518828ff221e17.webp
+index_img: 
 sticky:
 comment:
 ---
