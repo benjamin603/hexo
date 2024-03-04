@@ -320,7 +320,8 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git checkout -b backup<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>备份至Github：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add --all<br>git commit -m <span class="hljs-string">&quot;注释文字&quot;</span><br>git push -u origin backup<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add --all<br>git commit -m <span class="hljs-string">&quot;注释文字&quot;</span><br>git push -u origin backup<br></code></pre></td></tr></table></figure>
+</li>
 </ol>
 <p>此时我们的Github仓库有了两个分支：</p>
 <ul>
@@ -329,7 +330,6 @@
 </ul>
 <h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>如果主题是从Github克隆下来的，则会因为主题自身存在的<code>.git</code>文件夹导致无法成功上传主题文件。<br>解决办法：清理缓存，删除主题中的<code>.git</code>文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">rm</span> --cached <span class="hljs-string">&quot;文件夹名字&quot;</span><br></code></pre></td></tr></table></figure>
-
 <p>当然，我们也可以手动删除<code>.git</code>文件！</p>
 <p><strong>Done！</strong></p>
 
